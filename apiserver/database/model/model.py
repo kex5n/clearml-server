@@ -37,19 +37,6 @@ class Model(AttributedDocument):
             ("company", "name"),
             ("company", "user"),
             ("company", "uri"),
-            {
-                "name": "%s.model.main_text_index" % Database.backend,
-                "fields": ["$name", "$id", "$comment", "$parent", "$task", "$project"],
-                "default_language": "english",
-                "weights": {
-                    "name": 10,
-                    "id": 10,
-                    "comment": 10,
-                    "parent": 5,
-                    "task": 3,
-                    "project": 3,
-                },
-            },
         ],
     }
     get_all_query_options = GetMixin.QueryParameterOptions(

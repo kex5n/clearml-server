@@ -432,12 +432,10 @@ class ProjectBLL:
                         },
                         # then: floor((completed - started) / 1000)
                         "then": {
-                            "$floor": {
-                                "$divide": [
-                                    {"$subtract": ["$completed", "$started"]},
-                                    1000.0,
-                                ]
-                            }
+                            "$divide": [
+                                {"$subtract": ["$completed", "$started"]},
+                                1000.0,
+                            ]
                         },
                         "else": 0,
                     }
