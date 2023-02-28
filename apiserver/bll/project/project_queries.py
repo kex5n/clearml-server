@@ -194,7 +194,7 @@ class ProjectQueries:
             },
         ]
 
-        result = next(Task.aggregate(pipeline, collation=Task._numeric_locale), None)
+        result = next(Task.aggregate(pipeline), None)
         if not result:
             return 0, []
 
@@ -356,7 +356,7 @@ class ProjectQueries:
             },
         ]
 
-        result = next(Model.aggregate(pipeline, collation=Model._numeric_locale), None)
+        result = next(Model.aggregate(pipeline), None)
         if not result:
             return 0, []
 

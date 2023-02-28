@@ -22,12 +22,6 @@ class Project(AttributedDocument):
             "path",
             ("company", "name"),
             ("company", "basename"),
-            {
-                "name": "%s.project.main_text_index" % Database.backend,
-                "fields": ["$name", "$id", "$description"],
-                "default_language": "english",
-                "weights": {"name": 10, "id": 10, "description": 10},
-            },
         ],
     }
 
